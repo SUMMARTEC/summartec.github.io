@@ -10,17 +10,14 @@ title: Taxor Cloud: FAQ
 <br>
 <ul>
   <li><strong>¿Por qué está desactivada la funcionalidad de retenciones por defecto al instalar la extensión?</strong></li>
-  <br>
   Por prevención, ya que es muy frecuente que cada instalación de Business Central ya disponga de alguna funcionalidad de retenciones instalada por su partner.
   Si así fuera, al instalar la extensión Taxor Cloud entraría en conflicto y podría producirse un mal funcionamiento.<br>
   Si está completamente seguro que su instalación de Business Central no incorpora ninguna funcionalidad de retenciones, puede activarla. Vea el apartado <a href="/app/config.html">configuración</a> para más detalles.<br>
   <br>
   <li><strong>Ya tenemos nuestra propia funcionalidad de retenciones en Business Central, ¿cómo las incorporamos a Taxor Cloud?</strong></li>
-  <br>
   En este caso, su partner deberá incorporar la posibilidad de descargar las retenciones mediante un fichero en formato BOE para luego cargarlo en Taxor Cloud.<br>
   <br>
   <li><strong>Estamos utilizando Labor, ¿cómo hacemos llegar las retenciones desde esta aplicación a Taxor Cloud?</strong></li>
-  <br>
   Simplemente descargue el fichero que genera Labor con las retenciones e impórtelo en Taxor Cloud.<br>
 </ul>
 <!-- --------------------------------------------------------------------------------------------------------------- -->
@@ -28,13 +25,12 @@ title: Taxor Cloud: FAQ
 <br>
 <ul>
   <li><strong>Errores comunes</strong></li>
-  <br>
-  Documento sin país. Taxor Cloud utiliza el país para determinar si es una operación interior, intracomuntaria o foránea.<br>
-  <br>
-  Documento sin código postal. Taxor Cloud utiliza el código postal para determinar si es una operación fuera de la península, en cuyo caso se considera una operación foránea (exportación / importación).<br>
-  <br>
-  Bien de Inversión. Taxor Cloud comprueba si ha intervenido una cuenta del grupo 2 en la operación, en cuyo caso es muy posible que se trate de un bien de inversión. En muchas ocasiones el usuario no lo indica expresamente mediante su respectivo grupo de IVA.<br>
-  <br>
+  <ul>
+    <li>Documento sin país. Taxor Cloud utiliza el país para determinar si es una operación interior, intracomuntaria o foránea.</li>
+    <li>Documento sin código postal. Taxor Cloud utiliza el código postal para determinar si es una operación fuera de la península, en cuyo caso se considera una operación foránea (exportación / importación).</li>
+  </ul>
+  <!-- Bien de Inversión. Taxor Cloud comprueba si ha intervenido una cuenta del grupo 2 en la operación, en cuyo caso es muy posible que se trate de un bien de inversión. En muchas ocasiones el usuario no lo indica expresamente mediante su respectivo grupo de IVA.<br>
+  <br> -->
   <i>NOTA: Utilice la herramienta de <a href="/app/IVA.html">Chequeo de IVA</a> para comprobar si tiene operaciones erróneas.</i>
 </ul>
 </br>
