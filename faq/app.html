@@ -6,6 +6,17 @@ title: Taxor Cloud: FAQ
 </br>
 <h3>Preguntas frecuentes</h3>
 </br>
+<span class="fs-5"><strong>Sincronización</strong></span><br>
+<br>
+<ul>
+  <li><strong>¿Qué datos específicos se estan sincronizando?</strong></li>
+	Información básica sobre la empresa a sincronizar: Nombre, Dirección, Código Postal, País, Teléfono, Email, NIF, IAE y CNAE<br>
+	Datos básicos sobre facturas de compra y de venta, junto con la información relativa sobre IVA e información sobre si el cobro o pago ha sido en efectivo (comprobando si en el movimiento contable ha intervenido la cuenta 570)<br>
+	Para complementar la información anterior, también se obtiene información relacionada del cliente y proveedor, ésta última compuesta de Nombre, NIF, Código Postal y País<br>
+  Balances de sumas y saldos de contabilidad. No se obtienen los nombres de las cuentas, tan sólo el período, el acumulado debe y haber, y el saldo<br>
+  Si está registrando nóminas y sus retenciones para cada empleado, se tomarán los datos básicos relativos a la nómina e información básica sobre el empleado: Nombre, NIF, Código Postal y País<br>
+</ul>
+<!--- -------------------------------------------------------------------------------------------------------------- -->
 <span class="fs-5"><strong>Retenciones</strong></span><br>
 <br>
 <ul>
@@ -15,23 +26,31 @@ title: Taxor Cloud: FAQ
   Si está completamente seguro que su instalación de Business Central no incorpora ninguna funcionalidad de retenciones, puede activarla. Vea el apartado <a href="/app/config.html">configuración</a> para más detalles.<br>
   <br>
   <li><strong>Ya tenemos nuestra propia funcionalidad de retenciones en Business Central, ¿cómo las incorporamos a Taxor Cloud?</strong></li>
-  En este caso, su partner deberá incorporar la posibilidad de descargar las retenciones mediante un fichero en formato BOE para luego cargarlo en Taxor Cloud.<br>
+  En este caso, su partner deberá incorporar la posibilidad de descargar las retenciones mediante un fichero para luego cargarlo en Taxor Cloud.<br>
+  Para conocer la estructura concreta del fichero <a href="https://www.agenciatributaria.es/AEAT.internet/Inicio/Ayuda/Disenos_de_registro/Disenos_de_registro.shtml" target="_blank"></a>siga este enlace</a><br>
   <br>
-  <li><strong>Estamos utilizando Labor, ¿cómo hacemos llegar las retenciones desde esta aplicación a Taxor Cloud?</strong></li>
+  <li><strong>Estamos utilizando <a href="https://www.summar.es/software-nomina-labor/" target="_blank">Labor</a>, ¿cómo hacemos llegar las retenciones desde esta aplicación a Taxor Cloud?</strong></li>
   Simplemente descargue el fichero que genera Labor con las retenciones e impórtelo en Taxor Cloud.<br>
 </ul>
-<!-- --------------------------------------------------------------------------------------------------------------- -->
-<span class="fs-5" id="IVA-Chequeo"><strong>IVA</strong></span><br>
+<!--- -------------------------------------------------------------------------------------------------------------- -->
+<span class="fs-5"><strong>IVA</strong></span><br>
 <br>
 <ul>
-  <li><strong>Errores comunes</strong></li>
-  <ul>
-    <li>Documento sin país. Taxor Cloud utiliza el país para determinar si es una operación interior, intracomuntaria o foránea.</li>
-    <li>Documento sin código postal. Taxor Cloud utiliza el código postal para determinar si es una operación fuera de la península, en cuyo caso se considera una operación foránea (exportación / importación).</li>
-  </ul>
-  <!-- Bien de Inversión. Taxor Cloud comprueba si ha intervenido una cuenta del grupo 2 en la operación, en cuyo caso es muy posible que se trate de un bien de inversión. En muchas ocasiones el usuario no lo indica expresamente mediante su respectivo grupo de IVA.<br>
-  <br> -->
+  <li><strong>¿Para qué utiliza Taxor Cloud el país y el código postal?</strong></li>
+  Taxor Cloud utiliza el país para determinar si es una operación interior, intracomuntaria o foránea. 
+  Utiliza el código postal para determinar si es una operación interior pero fuera de la península (excepto Baleares), en cuyo caso se considera una operación foránea (exportación / importación).<br>
+  Destacar que las operaciones con el Reino Unido a partir del 1 de enero de 2021 se consideran foráneas.<br>
+    <!-- <li>País intracomunitario sin IVA de reversión. La operación incluye un país intracomunitario pero el tipo de IVA no es de reversión. Probablemente se trate de un error al indicar el grupo de IVA al dar de alta el cliente o proveedor.</li> -->
+  <!-- Bien de Inversión. Taxor Cloud comprueba si ha intervenido una cuenta del grupo 2 en la operación, en cuyo caso es muy posible que se trate de un bien de inversión. En muchas ocasiones el usuario no lo indica expresamente mediante su respectivo grupo de IVA.<br> -->
+  <br>
   <i>NOTA: Utilice la herramienta de <a href="/app/IVA.html">Chequeo de IVA</a> para comprobar si tiene operaciones erróneas.</i>
+  <br>
+  <li><strong>¿Cómo sé si nuestra empresa está registrando correctamente las transacciones con IVA?</strong></li>
+  Taxor Cloud incorpora un algoritmo propio que identifica errores y reclasifica las transacciones de IVA con el objetivo de informar correctamente las liquidaciones y declaraciones.<br> 
+  <br>
+  <i>NOTA: Puede utililzar la herramienta de la <a href="https://www2.agenciatributaria.gob.es/soporteaeat/Formularios.nsf/Localizador" target="_blank">Agencia Tributaria</a> para saber cómo proceder ante cualquier operación.</i>
 </ul>
 </br>
 </div>
+
+
