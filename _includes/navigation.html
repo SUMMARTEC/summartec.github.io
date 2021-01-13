@@ -42,3 +42,18 @@
     </ul>
   </div>
 </nav>
+
+<script>
+'use strict';
+
+document.querySelectorAll('a.nav-link')
+    .forEach(domContainer => {
+        if (location.pathname == domContainer.getAttribute('href') ) {
+            domContainer.classList.add('active');
+        } else {
+            if (domContainer.classList.contains('active')) {
+                domContainer.classList.remove('active');
+            }
+        }
+    });  
+</script>
