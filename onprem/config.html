@@ -6,16 +6,39 @@ title: Taxor Cloud: Configuración
   </br>
   <h3>Configuración</h3>
   </br>
+  <p>Existen 2 opciones para realizar la sincronización. Escoja la que más le convenga.</p>
   <!-- ------------------------------------------------------------------------------------------------------ -->
-  <span class="fs-5"><strong>General</strong></span>
+  <span class="fs-5"><strong>Data Gateway</strong></span>
   <ul>
-    <li>Busque y ejecute "TAXOR Cloud Configuración".</li>
-    <li>Haga click en "Obtener empresas". Le mostrará por pantalla las empresas que se sincronizarán con Taxor Cloud.</li>
+    <li>Microsoft On-premise Data Gateway va a permitir que se realice una conexión totalmente segura y exclusivamente desde su infraestructura informática y la infraestructura de Summar en Azure. 
+      Lo mejor es que no hay que tocar nada en su infraestructura, ni routers ni firewalls. 
+      Puede obtener información en <a href="https://docs.microsoft.com/es-es/data-integration/gateway/service-gateway-onprem" target="_blank">¿Qué es una puerta de enlace de datos local?</a></li>
+    <li>Para proceder con la instalación vea este enlace <a href="https://docs.microsoft.com/es-es/data-integration/gateway/service-gateway-install" target="_blank">Instalar una puerta de enlace de datos local</a> desde el que podrá saber los requisitos y consideraciones, 
+      además de descargar el ejecutable de instalación.</li>
+    <li>Es indispensable que la instalación se realice en un ordenador o servidor con acceso a Internet y al servidor SQL y que no se detenga durante las noches. 
+      Si es un servidor, no puede ser controlador de dominio.</li>
+    <li>Al instalar se solicitará una cuenta de correo electrónico de Office 365 y el nombre de la puerta de enlace. 
+      Utilice para ello la información suministrada por Summar con el objetivo de que ésta puerta de enlace esté exclusivamente conectada con la infraestructura de Summar en Azure.</li>
   </ul>
   <!-- ------------------------------------------------------------------------------------------------------ -->
-  <span class="fs-5"><strong>Usuarios</strong></span>
+  <span class="fs-5"><strong>Firewall</strong></span>
   <ul>
-    <li>El sistema asignará automáticamente los permisos requeridos a todos los usuarios existentes. Si desea que algún usuario no acceda a la funcionalidad proporcionada por la app deberá quitarle el permiso. Igualmente, cuando cree nuevos usuarios, si desea que acceda a la funcionalidad proporcionada por la app deberá asignarle el permiso. El nombre del permiso (Role ID) es TAX-CONECTOR</li>
+    <li>Esta opción no requiere de ninguna instalación de ningún software en su infraestructura informática. 
+      Eso sí, deberá crear alguna regla en su Firewall y en caso de que posea infraestructura propietaria quizá deba tocar también su router. 
+      Puede y debe limitar las IPs que pueden acceder al puerto SQL. Para este caso concreto, debe saber que la infraestructura en Azure de Summar se halla en West Europe, 
+      utilice para ello la columna "Managed connectors IP" con las IPS indicadas en <a href="https://docs.microsoft.com/en-us/azure/logic-apps/logic-apps-limits-and-config#outbound-ip-addresses" target="_blank">Limits and configuration - Azure</a></li>
+    <li><strong>Si su infraestructura informática se encuentra en Azure va a resultar mucho más fácil</strong>, 
+      tan sólo debe configurar el <a href="https://docs.microsoft.com/en-us/azure/virtual-network/service-tags-overview" target="_blank">Tag AzureConnectors - Azure</a></li>
+  </ul>
+  <!-- ------------------------------------------------------------------------------------------------------ -->
+  <!-- ------------------------------------------------------------------------------------------------------ -->
+  <span class="fs-5"><strong>En ambos casos</strong></span>
+  <ul>
+    <li>Deberá instalar en la BBDD del ERP unos “Stored Procedures” suministrados por Summar. 
+      Estos procedimientos serán utilizados exclusivamente para obtener (read only) la información precisa desde el ERP hacia TAXOR Cloud.</li>
+    <li>Finalmente, deberá suministrar a Summar un usuario y contraseña con acceso a SQL Server y permisos para ejecutar los “Stored procedures” y acceder a los datos del ERP. 
+      Por favor, procure que la contraseña nunca caduque ya que sino el sistema de sincronización se detendría.</li>
+    <li>Para su información, la sincronización se realizará siempre durante las noches. Si representa un problema o existe algún horario preferido háganoslo saber.</li>
   </ul>
   <!-- ------------------------------------------------------------------------------------------------------ -->
   </br>
