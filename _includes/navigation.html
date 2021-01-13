@@ -48,6 +48,7 @@
 
 document.querySelectorAll('a.nav-link')
     .forEach(domContainer => {
+        alert(location.pathname + ' --- ' + domContainer.getAttribute('href'));
         if (location.pathname == domContainer.getAttribute('href') ) {
             domContainer.classList.add('active');
         } else {
