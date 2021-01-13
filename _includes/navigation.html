@@ -48,8 +48,8 @@
 
 document.querySelectorAll('a.nav-link')
     .forEach(domContainer => {
-        alert(location.pathname + ' --- ' + domContainer.getAttribute('href'));
         if (location.pathname == domContainer.getAttribute('href') ) {
+            alert(location.pathname + ' --- ' + domContainer.getAttribute('href'));
             domContainer.classList.add('active');
         } else {
             if (domContainer.classList.contains('active')) {
