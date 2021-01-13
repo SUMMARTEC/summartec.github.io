@@ -6,7 +6,16 @@ title: Taxor Cloud: Configuración
   </br>
   <h3>Configuración</h3>
   </br>
-  <p>Existen 2 opciones para realizar la sincronización. Escoja la que más le convenga.</p>
+  <p>El objetivo es que la infraestructura de Summar en Azure pueda conectarse a su SQL Server para obtener los datos de su ERP necesarios para Taxor Cloud.<br>
+    Existen varias opciones para realizar la sincronización. Escoja la que más le convenga.</p>
+  <!-- ------------------------------------------------------------------------------------------------------ -->
+  <span class="fs-5"><strong>Extensión</strong></span>
+  <ul>
+    <li>Si su versión de Business Central es igual o superior a la versión 17 (octubre 2020) puede optar por instalar la extensión para Taxor Cloud.</li>
+  </ul>
+  <div class="container">
+    <i>NOTA: Consulte <a href="/app/config.html">este enlace</a> para saber más.</i>
+  </div></br>
   <!-- ------------------------------------------------------------------------------------------------------ -->
   <span class="fs-5"><strong>Data Gateway</strong></span>
   <ul>
@@ -31,8 +40,7 @@ title: Taxor Cloud: Configuración
       tan sólo debe configurar el <a href="https://docs.microsoft.com/en-us/azure/virtual-network/service-tags-overview" target="_blank">Tag AzureConnectors - Azure</a></li>
   </ul>
   <!-- ------------------------------------------------------------------------------------------------------ -->
-  <!-- ------------------------------------------------------------------------------------------------------ -->
-  <span class="fs-5"><strong>En ambos casos</strong></span>
+  <span class="fs-5"><strong>En los dos casos anteriores</strong></span>
   <ul>
     <li>Deberá instalar en la BBDD del ERP unos “Stored Procedures” suministrados por Summar. 
       Estos procedimientos serán utilizados exclusivamente para obtener (read only) la información precisa desde el ERP hacia TAXOR Cloud.</li>
