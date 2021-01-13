@@ -49,12 +49,9 @@
 document.querySelectorAll('a.nav-link')
     .forEach(domContainer => {
         if (location.pathname == domContainer.getAttribute('href') ) {
-            alert(location.pathname + ' --- ' + domContainer.getAttribute('href'));
-            domContainer.classList.add('active');
+            domContainer.style.fontWeight = 'bold';
         } else {
-            if (domContainer.classList.contains('active')) {
-                domContainer.classList.remove('active');
-            }
+            domContainer.style.fontWeight = 'normal';
         }
     });  
 </script>
