@@ -17,8 +17,11 @@
       <div class="row">
         {% include navigation.html %}
         <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
-          Fecha: {{ page.date | date_to_string }}<br>
-          Categoría: {{ category }}<br>
+          {% assign image_files = site.static_files %}
+          {% for myimage in image_files %}
+            {{ myimage.path }}
+          {% endfor %}          
+          <!-- Categoría: {{ category }}<br> -->
           {{ content }}
         </main>
       </div>
