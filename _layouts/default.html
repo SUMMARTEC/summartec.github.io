@@ -17,12 +17,16 @@
       <div class="row">
         {% include navigation.html %}
         <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
-          <span>[
-            {% for tag in page.tags %}
-              {% capture tag_name %}{{ tag }}{% endcapture %}
-              <a href="/tag/{{ tag_name }}"><code class="highligher-rouge"><nobr>{{ tag_name }}</nobr></code>&nbsp;</a>
-            {% endfor %}
-          ]</span>          
+          <!-- Pinta los Tags -->
+          <!-- {% if site.tags != "" %}
+            <span>[
+              {% for tag in page.tags %}
+                {% capture tag_name %}{{ tag }}{% endcapture %}
+                <code class="highligher-rouge"><nobr>{{ tag_name }}</nobr></code>&nbsp;
+              {% endfor %}
+            ]</span>          
+          {% endif %} -->
+          <!-- Coloca el contenido -->
           {{ content }}
         </main>
       </div>
