@@ -4,5 +4,34 @@ title: "Taxor Cloud Migración"
 tags: Migracion
 ---
 <div class="container">
+    <br>
+    <h3>Migración</h3>
+    <br>
     <img src="migracion.png" alt="Proceso de migración" \>
+    <br>
+    <span class="fs-5"><strong>¿Cómo se realiza la migración?</strong></span>
+    El conector tomará los datos del actual Taxor y los replicará automáticamente en Taxor Cloud para cada una de las empresas.<br>
+    <br>
+    <span class="fs-5"><strong>¿Qué datos se migran?</strong></span>
+    Los datos relativos a la sociedad: constitución, socios y accionistas, administradores, sociedades participadas, etc.<br>
+    Datos históricos relativos a las liquidaciones y declaraciones: IVA, retenciones, sociedades, etc.<br>
+    <!-- Desde inicio del año 2020, el detalle de facturas de compra y de venta, junto con la información relativa sobre IVA, así como el balance contable de sumas y saldos.<br> -->
+    <br>
+    <span class="fs-5"><strong>¿Cuándo realizar la migración?</strong></span>
+    Se puede realizar la migración en cualquier momento, después de haber migrado el ERP.<br>
+    Se puede seguir utilizando Taxor hasta la migración a Taxor Cloud, siempre que se cuente con la información apropiada para hacer las liquidaciones o declaraciones.<br>
+    <br>
+    <span class="fs-5"><strong>¿Qué ocurre con el actual Taxor?</strong></span>
+    A partir del momento de la migración a Taxor Cloud deja de utilizarse. 
+    Deben eliminarse los objetos y los datos que contienen en la nueva versión del ERP ya que no son necesarios.<br>
+    <br>
+    <span class="fs-5"><strong>¿Qué ocurre a partir del momento de la migración a Taxor Cloud?</strong></span>
+    La sincronización diaria incremental tomará el detalle de la información desde la nueva versión del ERP. 
+    Se podrá realizar cualquier liquidación o declaración relativa al año 2020 en adelante ya que el conector habrá obtenido la información necesaria tanto desde 
+        el antiguo como desde el nuevo ERP.<br>
+    <br>
+    <span class="fs-5"><strong>¿Qué ocurre con el add-on de Taxor incluido en la licencia del cliente?</strong></span>
+    Puede eliminarse siempre y cuando no se vaya a utilizar la extensión de Summar en una versión Business Central on-premise (BC17 o superior), 
+        en cuyo caso el add-on continua siendo necesario para la ejecución de la extensión.<br>
+    <br>
 </div>
