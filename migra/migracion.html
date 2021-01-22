@@ -24,14 +24,21 @@ tags: Migracion
     <span class="fs-5"><strong>¿Qué ocurre con el actual Taxor?</strong></span><br>
     A partir del momento de la migración a Taxor Cloud deja de utilizarse. 
     Deben eliminarse los objetos y los datos que contienen en la nueva versión del ERP ya que no son necesarios.<br>
+    <!-- "deben" y no "pueden" pqe si va a utilizarse la extensión en un BC on-prem los objetos deben haber sido borrados -->
+    <!-- NOTA TÉCNICA INTERNA: Deben eliminarse con la licencia de Summar, ni la del partner ni del cliente pueden. -->
     <br>
     <span class="fs-5"><strong>¿Qué ocurre a partir del momento de la migración a Taxor Cloud?</strong></span><br>
     La sincronización diaria incremental tomará el detalle de la información desde la nueva versión del ERP. 
     Se podrá realizar cualquier liquidación o declaración relativa al año 2020 en adelante ya que el conector habrá obtenido la información necesaria tanto desde 
         el antiguo como desde el nuevo ERP.<br>
+    <!-- NOTA TÉCNICA INTERNA: Cuidado con la sincro incremental por IDcliente, ya que la nueva versión empezará de cero. -->
     <br>
     <span class="fs-5"><strong>¿Qué ocurre con el add-on de Taxor incluido en la licencia del cliente?</strong></span><br>
     Puede eliminarse siempre y cuando no se vaya a utilizar la extensión de Summar en una versión Business Central on-premise (BC17 o superior), 
         en cuyo caso el add-on continua siendo necesario para la ejecución de la extensión.<br>
+    <!-- NOTA TÉCNICA INTERNA: En este punto sí que los objetos de Taxor deben haber sido borrados ya que coincidiran con los objetos de la extensión.         -->
+    <br>
+    <span class="fs-5"><strong>Información sonre el conector</strong></span><br>
+    Consulte este <a href="/onprem/config.html">vínculo</a>.
     <br>
 </div>
