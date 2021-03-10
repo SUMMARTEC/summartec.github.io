@@ -1,0 +1,69 @@
+---
+layout: default
+title: "Taxor Cloud Información"
+tags: AppHelp
+---
+<div class="container">
+</br>
+
+<h3>Taxor Cloud Extensión</h3>
+</br>
+La extensión de Taxor Cloud para Business Central se utiliza básicamente para la sincronización de datos e incluye además funcionalidades relacionadas con los impuestos con el objetivo de complementar información que el ERP no dispone.<br>
+Estas funcionalidades pueden activarse o desactivarse por configuración para que no colisiones con otras funcionalidades que pudieran estar presentes en el sistema.<br>
+<br>
+
+<span class="fs-5"><strong>Sincronización</strong></span>
+<ul>
+  <li><strong>¿Cómo se realiza la sincronización?</strong></li>
+  La sincronización se realiza mediante web services. Con la instalación de la extensión se publicarán nuevos web services que serán utilizados por Taxor Cloud para realizar la sincronización.<br>
+  La sincronización se lleva a cabo de forma incremental, lo que significa que en cada sincronización se tomarán los datos nuevos obviando los anteriores ya sincronizados.<br>
+  Los web services de Business Central están securizados y no permiten su ejecución de forma anónima.<br>
+  Para realizar la sincronización Summar precisará de un usuario y su web access key (no el password). Por favor, procure que la web access key nunca caduque ya que sino el sistema de sincronización se detendría.<br>
+  <br>
+  <li><strong>¿Qué datos específicos se estan sincronizando?</strong></li>
+	Información básica sobre la empresa a sincronizar: Nombre, Dirección, Código Postal, País, Teléfono, Email, NIF, IAE y CNAE<br>
+	Datos básicos sobre facturas de compra y de venta, junto con la información relativa sobre IVA e información sobre si el cobro o pago ha sido en efectivo (comprobando si en el movimiento contable ha intervenido la cuenta 570)<br>
+	Para complementar la información anterior, también se obtiene información relacionada del cliente y proveedor, ésta última compuesta de Nombre, NIF, Código Postal y País<br>
+  Balances de sumas y saldos de contabilidad. No se obtienen los nombres de las cuentas, tan sólo el período, el acumulado debe y haber, y el saldo<br>
+  Si está registrando nóminas y sus retenciones para cada empleado, se tomarán los datos básicos relativos a la nómina e información básica sobre el empleado: Nombre, NIF, Código Postal y País<br>
+  <br>
+  <li><strong>¿Cuándo se realiza la sincronización?</strong></li>
+  La sincronización se realiza automáticamente por los noches sin que usted tenga que hacer nada.<br>
+  Aún y así, usted puede forzar la sincronización en cualquier momento que desee.<br>
+  <br>
+</ul>
+
+<span class="fs-5"><strong>I.V.A.</strong></span>
+<ul>
+  <li><strong>¿Qué información adicional incluye la extensión?</strong></li>
+  La extensión incluye funcionalidad para conocer si el tercero en cuestión forma parte de las empresas del grupo para así marcar las transacciones adecuadamente con esta información adicional demandada por Hacienda.<br>
+  Dispone de distintas formas de configurar esta funcionalidad: por inter-company, por dimensiones o manualmente.<br>
+  <br>
+  Además, la extensión también descubrirá si en la transacción ha intervenido una cuenta del grupo 2 (activo fijo) para marcarla adecuadamente ya que es otra información demandada por Hacienda.<br>
+  <br>
+  Se incluye también información adicional relacionada con las Actividades (Epígrafes) para que pueda agrupar las transacciones según este dato fiscal.<br>
+  Dispone de distintas formas de configurar esta funcionalidad: por dimensiones o manualmente.<br>
+  <br>
+  Puede utilizar si lo desea una funcionalidad que le mostrará los errores detectados en las transacciones de I.V.A. así como advertencias y sugerencias.<br>
+  <br>
+</ul>
+
+<span class="fs-5"><strong>I.R.P.F.</strong></span>
+<ul>
+  <li><strong>¿Qué información adicional incluye la extensión?</strong></li>
+  La extensión incluye campos adicionales para establecer ciertas características básicas como son clave y subclave de IRPF, así como el % de retención y el tipo de percepción.<br>
+  Esta información está disponible en los documentos de compra pero también en los diarios contables, de esta forma podrá, por ejemplo, registrar la retención en el momento del pago o registrar las retenciones de las nóminas.<br>
+  <br>
+  Se incluye también información adicional relacionada con los Inmuebles para que pueda agrupar registrar transacciones en los que intervengan.<br>
+  Dispone de distintas formas de configurar esta funcionalidad: prefijándolo en el proveedor, por dimensiones o manualmente.<br>
+  <br>
+</ul>
+
+<span class="fs-5"><strong>Legalización de libros</strong></span>
+<ul>
+  <li><strong>¿Cómo generar los Libros Oficiales?</strong></li>
+  La extensión incluye funcionalidad para generar un archivo "zip" con toda la documentación necesaria del ERP para su posterior presentación telemática en https://www.registradores.org/<br>
+  <br>
+</ul>
+
+</div>
