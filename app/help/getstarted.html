@@ -21,7 +21,7 @@ Estas funcionalidades pueden activarse o desactivarse por configuración para qu
   Los web services de Business Central están securizados y no permiten su ejecución de forma anónima.<br>
   Para realizar la sincronización Summar precisará de un usuario y su web access key (no el password). Por favor, procure que la web access key nunca caduque ya que sino el sistema de sincronización se detendría.<br>
   <br>
-  <li><strong>¿Qué datos específicos se estan sincronizando?</strong></li>
+  <li><strong>¿Qué datos específicos se están sincronizando?</strong></li>
 	Información básica sobre la empresa a sincronizar: Nombre, Dirección, Código Postal, País, Teléfono, Email, NIF, IAE y CNAE<br>
 	Datos básicos sobre facturas de compra y de venta, junto con la información relativa sobre IVA e información sobre si el cobro o pago ha sido en efectivo (comprobando si en el movimiento contable ha intervenido la cuenta 570)<br>
 	Para complementar la información anterior, también se obtiene información relacionada del cliente y proveedor, ésta última compuesta de Nombre, NIF, Código Postal y País<br>
@@ -37,6 +37,9 @@ Estas funcionalidades pueden activarse o desactivarse por configuración para qu
 <br>
 <ul>
   <li><strong>¿Qué información adicional incluye la extensión?</strong></li>
+  La extensión incorpora campos adicionales en la configuración del IVA para determinar si un IVA es no deducible. En ese caso, se podrá indicar el % de IVA y de RE. Esta finformación se trasladará a la tabla de registros no gravables y se sincronizará con Taxor Cloud.<br>
+  En estos casos, como todo el importe del IVA es coste, se deberá configurar el IVA como tipo "Ningún IVA sujeto".<br>
+  <br>
   La extensión incluye funcionalidad para conocer si el tercero en cuestión forma parte de las empresas del grupo para así marcar las transacciones adecuadamente con esta información adicional demandada por Hacienda.<br>
   Dispone de distintas formas de configurar esta funcionalidad: por inter-company, por dimensiones o manualmente.<br>
   <br>
